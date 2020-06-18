@@ -27,6 +27,4 @@ void push(heapType * h,int item,bool max_min);
 
 int pop(heapType * h,bool max_min);
 
-void printHeap(heapType * h);
-
 #endif

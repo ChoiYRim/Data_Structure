@@ -16,7 +16,6 @@ int main(void)
 	for(i = 0; i < 120; i++)
 		push(heap,i,1);
 
-	printHeap(heap);
 	n = heap->heap_size;
 
 	for(i = 1; i <= n; i++)

@@ -14,7 +14,8 @@ void push(heapType * h,int item,bool max_min)
 {
 	int i;
 
-	if(h->heap_size + 1 >= ELEMENT)
+	h->heap_size = h->heap_size + 1;
+	if(h->heap_size >= ELEMENT)
 	{
 		ELEMENT *= 2;
 		int * tmp = (int *)malloc(sizeof(int)*ELEMENT);
@@ -24,7 +25,7 @@ void push(heapType * h,int item,bool max_min)
 		free(h->heap);
 		h->heap = tmp;
 	}
-	h->heap_size = h->heap_size + 1;
+
 	i = h->heap_size;
 
 	if(max_min == TRUE) // max heap
@@ -80,13 +81,4 @@ int pop(heapType * h,bool max_min)
 	}
 	h->heap[parent] = temp;
 	return item;
-}
-
-void printHeap(heapType * h)
-{
-	int i;
-	printf("Heap : ");
-	for(i = 1; i <= h->heap_size; i++)
-		printf(" [%d] ", h->heap[i]);
-	printf("\n");
 }
