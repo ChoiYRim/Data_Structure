@@ -11,3 +11,9 @@ NCNYR added a few simple codes.
 I'm not a native speaker, so please consider it when you read this script :)
 
 [OVERVIEW]
+
+* Simple Data Structure LIST
+
+	1. Heap Tree
+
+	2. Binary Search Tree
